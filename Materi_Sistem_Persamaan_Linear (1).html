@@ -1,0 +1,1271 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Penyelesaian: &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Materi_Sistem_Persamaan_Linear (1)';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Langkah 1: Eliminasi Kolom Pertama" href="Eliminasi_Gussian_3variabel%264variabel.html" />
+    <link rel="prev" title="Materi Kal" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Materi Kal
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian:</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Eliminasi_Gussian_3variabel%264variabel.html">Langkah 1: Eliminasi Kolom Pertama</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMateri_Sistem_Persamaan_Linear (1).html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Materi_Sistem_Persamaan_Linear (1).ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Penyelesaian:</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Penyelesaian:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban">Jawaban:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#verifikasi">Verifikasi:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Penyelesaian:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Penyelesaian</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-eliminasi-variabel-y"><strong>Langkah 1: Eliminasi variabel <span class="math notranslate nohighlight">\(y\)</span></strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-analisis-hasil"><strong>Langkah 2: Analisis hasil</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Jawaban:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linier">Penyelesaian Sistem Persamaan Linier</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal">Soal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-augmented">Matriks Augmented</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-penyelesaian-eliminasi-gauss-rref">Langkah Penyelesaian (Eliminasi Gauss - RREF)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-eliminasi-baris-2-dan-3">Langkah 1: Eliminasi baris 2 dan 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-normalisasi-baris-2">Langkah 2: Normalisasi Baris 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-eliminasi-baris-3">Langkah 3: Eliminasi Baris 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-normalisasi-baris-3">Langkah 4: Normalisasi Baris 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-eliminasi-ke-atas-back-substitution">Langkah 5: Eliminasi ke atas (Back Substitution)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-rref-reduced-row-echelon-form">Matriks RREF (Reduced Row Echelon Form)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Verifikasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#himpunan-penyelesaian">Himpunan Penyelesaian</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>#<strong>Pendahuluan Sistem Persamaan Linear</strong>
+Sistem persamaan linear (SPL) adalah kumpulan dua atau lebih persamaan linear yang melibatkan variabel-variabel yang sama dan harus diselesaikan secara bersamaan.Informasi-informasi dalam bidang sains, ekonomi, teknologi, teknik dan
+matematika seringkali disusun atau diatur ke dalam baris dan kolom dengan format
+persegi panjang yang disebut matriks.Sebagai contoh dalam penyelesaian
+sistem persamaan linear (SPL) berikut:</p>
+<div class="math notranslate nohighlight">
+\[
+5x + y = 3
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+2x - y = 4
+\]</div>
+<p>Jika dijadikan Matriks menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+5 &amp; 1 &amp; 3 \\
+2 &amp; -1 &amp; 4
+\end{bmatrix}
+\end{split}\]</div>
+<p>Solusi SPL bisa diperoleh dengan melakukan operasi pada matriks. Langkah ini penting dalam pemrograman karena komputer lebih mudah bekerja dengan data angka yang terstruktur.</p>
+<p>Meski begitu, matriks tidak hanya alat bantu buat mengerjakan SPL. Matriks juga merupakan objek matematika yang punya teori luas dan banyak aplikasi praktis. Kajian tentang matriks inilah yang membentuk cabang matematika bernama <strong>Aljabar Linear</strong>.
+##<strong>Persamaan Linier</strong>
+Secara umum, sistem linear dari m persamaan dengan variabel n tak
+diketahui dapat ditulis sebagai:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left.
+\begin{aligned}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &amp;= b_1 \\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &amp;= b_2 \\
+\cdots &amp; \cdots \\
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &amp;= b_m
+\end{aligned}
+\right\}
+\end{split}\]</div>
+<p>Solusi dari sistem linear dalam <span class="math notranslate nohighlight">\(n\)</span> variabel tak diketahui <span class="math notranslate nohighlight">\(x_1, x_2, ..., x_n\)</span> adalah barisan dari <span class="math notranslate nohighlight">\(n\)</span> bilangan <span class="math notranslate nohighlight">\(s_1, s_2, ..., x_n\)</span> dimana substitusinya adalah:
+$<span class="math notranslate nohighlight">\(x_1 = s_1, x_2 = s_2, ..., x_n = s_n\)</span><span class="math notranslate nohighlight">\(
+Yang membuat masing-masing persamaan menjadi pernyataan yang benar.
+Sebagai contoh, sistem memiliki solusi:
+\)</span><span class="math notranslate nohighlight">\(x = 1, y = -2\)</span><span class="math notranslate nohighlight">\(
+Dan sistem memiliki solusi:
+\)</span><span class="math notranslate nohighlight">\(x_1 = 1, x_2 = 2, x_3 = -1\)</span><span class="math notranslate nohighlight">\(
+Solusi-solusi di atas dapat ditulis dengan ringkas menjadi:
+\)</span><span class="math notranslate nohighlight">\((1, -2) \text{ dan } (1, 2, -1)\)</span>$</p>
+<p>##<strong>Sistem Persamaan Linear Dengan 2 dan 3 Variabel Tidak Diketahui</strong>
+Sistem linear dalam dua variabel yang tak diketahui, muncul dalam
+hubungannya dengan titik potong dari garis-garis tersebut. Sebagai contoh,
+perhatikan sistem linear berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+a_1 x + b_1 y &amp;= c_1 \\
+a_2 x + b_2 y &amp;= c_2
+\end{aligned}
+\end{split}\]</div>
+<p>Dimana, grafik-grafik dari persamaan adalah garis-garis dalam bidang xy.
+Setiap solusi (x, y) dari sistem, berkorespondensi kepada suatu titik dari
+irisan garis-garis tersebut, sehingga terdapat 3 kemungkinan:</p>
+<p><strong>1. Garis-garis mungkin saja berisisan di satu titik, dalam kasus ini sistem
+memiliki tepat satu solusi.contoh gambar di geogebra dengan contoh soal:</strong>
+$<span class="math notranslate nohighlight">\(
+5x + y = 3 \\
+2x - y = 4
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">IFrame</span>
+
+<span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;https://www.geogebra.org/calculator/sgr5ywbc?embed&#39;</span><span class="p">,</span>
+       <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+       <span class="n">height</span><span class="o">=</span><span class="mi">700</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="1000"
+            height="700"
+            src="https://www.geogebra.org/calculator/sgr5ywbc?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="c1"># Matriks = [[5, 1, 3], [2, -1, 4]]</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks Augmented Awal:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># 2. Lakukan OBE secara otomatis menggunakan rref</span>
+<span class="c1"># rref: Reduced Row Echelon Form</span>
+<span class="n">solusi_matriks</span><span class="p">,</span> <span class="n">pivot</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">rref</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah dilakukan OBE (RREF):&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">solusi_matriks</span><span class="p">)</span>
+
+<span class="c1"># 3. Ekstrak nilai x dan y</span>
+<span class="n">x_val</span> <span class="o">=</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">y_val</span> <span class="o">=</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Kesimpulan:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nilai x = </span><span class="si">{</span><span class="n">x_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nilai y = </span><span class="si">{</span><span class="n">y_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Solusi ini sesuai dengan titik potong pada grafik GeoGebra: (</span><span class="si">{</span><span class="n">x_val</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">y_val</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Matriks = [[5, 1, 3], [2, -1, 4]]</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>               <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="penyelesaian">
+<h1>Penyelesaian:<a class="headerlink" href="#penyelesaian" title="Link to this heading">#</a></h1>
+<p><strong>Langkah 1: Eliminasi variabel <span class="math notranslate nohighlight">\(y\)</span></strong></p>
+<p>Jumlahkan kedua persamaan:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+(5x + y) + (2x - y) &amp;= 3 + 4 \\
+7x &amp;= 7 \\
+x &amp;= 1
+\end{aligned}
+\)</span>$</p>
+<p><strong>Langkah 2: Substitusi nilai <span class="math notranslate nohighlight">\(x\)</span> ke salah satu persamaan</strong></p>
+<p>Substitusi <span class="math notranslate nohighlight">\(x = 1\)</span> ke persamaan pertama:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+5(1) + y &amp;= 3 \\
+5 + y &amp;= 3 \\
+y &amp;= 3 - 5 \\
+y &amp;= -2
+\end{aligned}
+\)</span>$</p>
+</section>
+<section id="jawaban">
+<h1>Jawaban:<a class="headerlink" href="#jawaban" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[
+\boxed{x = 1,\quad y = -2}
+\]</div>
+</section>
+<section id="verifikasi">
+<h1>Verifikasi:<a class="headerlink" href="#verifikasi" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Persamaan 1: <span class="math notranslate nohighlight">\(5(1) + (-2) = 5 - 2 = 3\)</span> ✓</p></li>
+<li><p>Persamaan 2: <span class="math notranslate nohighlight">\(2(1) - (-2) = 2 + 2 = 4\)</span> ✓</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Himpunan Penyelesaian:</strong> <span class="math notranslate nohighlight">\(\{(1, -2)\}\)</span></p>
+</div></blockquote>
+<p><strong>2.Garis-garis mungkin saja paralel dan berjauhan, dalam kasus ini tidak
+terdapat irisan dan konsekuensinya tidak ada solusi.Contoh gambar di geogebra menggunakan contoh soal berikut:</strong>
+$<span class="math notranslate nohighlight">\(
+2x + 3y = 6 \\
+-2x - 3y = 12
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">IFrame</span>
+
+<span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;https://www.geogebra.org/graphing/ffah8cng?embed&#39;</span><span class="p">,</span>
+       <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+       <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="600"
+            src="https://www.geogebra.org/graphing/ffah8cng?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="c1"># Matriks untuk sistem: 2x + 3y = 6 dan -2x - 3y = 12</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+               <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks Augmented Awal:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># Lakukan OBE secara otomatis menggunakan rref</span>
+<span class="n">solusi_matriks</span><span class="p">,</span> <span class="n">pivot</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">rref</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah dilakukan OBE (RREF):&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">solusi_matriks</span><span class="p">)</span>
+
+<span class="c1"># Cek apakah ada solusi</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Kesimpulan:&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⚠️ Kontradiksi: 0 = </span><span class="si">{</span><span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Sistem TIDAK MEMILIKI SOLUSI&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">x_val</span> <span class="o">=</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="n">y_val</span> <span class="o">=</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nilai x = </span><span class="si">{</span><span class="n">x_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nilai y = </span><span class="si">{</span><span class="n">y_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Solusi: (</span><span class="si">{</span><span class="n">x_val</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">y_val</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks Augmented Awal:
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}2 &amp; 3 &amp; 6\\-2 &amp; -3 &amp; 12\end{matrix}\right]\end{split}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks setelah dilakukan OBE (RREF):
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; \frac{3}{2} &amp; 0\\0 &amp; 0 &amp; 1\end{matrix}\right]\end{split}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kesimpulan:
+⚠️ Kontradiksi: 0 = 1
+❌ Sistem TIDAK MEMILIKI SOLUSI
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h1>Penyelesaian:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p><strong>Langkah 1: Eliminasi variabel</strong></p>
+<p>Jumlahkan kedua persamaan:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+(2x + 3y) + (-2x - 3y) &amp;= 6 + 12 \\
+0x + 0y &amp;= 18 \\
+0 &amp;= 18
+\end{aligned}
+\)</span>$</p>
+<p><strong>Analisis:</strong></p>
+<p>Karena diperoleh pernyataan salah (<span class="math notranslate nohighlight">\(0 = 18\)</span>), maka sistem persamaan ini <strong>tidak memiliki solusi</strong>.</p>
+<p><strong>3.Garis-garis mungkin saja berhimpit, dalam kasus ini terdapat tak hingga
+titik dari irisan dan konsekuensinya terdapat tak hingga solusi.contoh gambar di geogebra menggunakan soal berikut:</strong>
+$<span class="math notranslate nohighlight">\(
+3x - 2y = 6 \\
+6x - 4y = 12
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">IFrame</span>
+
+<span class="n">IFrame</span><span class="p">(</span>
+    <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.geogebra.org/calculator/ammcaqac?embed&quot;</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">600</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="600"
+            src="https://www.geogebra.org/calculator/ammcaqac?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="c1"># Matriks Augmented untuk sistem:</span>
+<span class="c1"># 3x - 2y = 6</span>
+<span class="c1"># 6x - 4y = 12</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+               <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks Augmented Awal:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># Lakukan OBE secara otomatis menggunakan rref</span>
+<span class="n">solusi_matriks</span><span class="p">,</span> <span class="n">pivot</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">rref</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah dilakukan OBE (RREF):&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">solusi_matriks</span><span class="p">)</span>
+
+<span class="c1"># Analisis hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Kesimpulan:&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Baris kedua semua nol → Kedua garis BERIMPIT&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Sistem memiliki SOLUSI TAK HINGGA&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="n">x_val</span> <span class="o">=</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="n">y_val</span> <span class="o">=</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nilai x = </span><span class="si">{</span><span class="n">x_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nilai y = </span><span class="si">{</span><span class="n">y_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Solusi ini sesuai dengan titik potong pada grafik GeoGebra: (</span><span class="si">{</span><span class="n">x_val</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">y_val</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks Augmented Awal:
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}3 &amp; -2 &amp; 6\\6 &amp; -4 &amp; 12\end{matrix}\right]\end{split}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks setelah dilakukan OBE (RREF):
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; - \frac{2}{3} &amp; 2\\0 &amp; 0 &amp; 0\end{matrix}\right]\end{split}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kesimpulan:
+✅ Baris kedua semua nol → Kedua garis BERIMPIT
+✅ Sistem memiliki SOLUSI TAK HINGGA
+
+Nilai x = 2
+Nilai y = 0
+Solusi ini sesuai dengan titik potong pada grafik GeoGebra: (2, 0)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h1>Penyelesaian<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
+<section id="langkah-1-eliminasi-variabel-y">
+<h2><strong>Langkah 1: Eliminasi variabel <span class="math notranslate nohighlight">\(y\)</span></strong><a class="headerlink" href="#langkah-1-eliminasi-variabel-y" title="Link to this heading">#</a></h2>
+<p>Kalikan persamaan pertama dengan 2:
+$<span class="math notranslate nohighlight">\(
+\begin{array}{rcl}
+2(3x - 2y) &amp; = &amp; 2(6) \\
+6x - 4y &amp; = &amp; 12
+\end{array}
+\)</span>$</p>
+<p>Kurangkan dengan persamaan kedua:
+$<span class="math notranslate nohighlight">\(
+\begin{array}{rcl}
+(6x - 4y) - (6x - 4y) &amp; = &amp; 12 - 12 \\
+0 &amp; = &amp; 0
+\end{array}
+\)</span>$</p>
+</section>
+<section id="langkah-2-analisis-hasil">
+<h2><strong>Langkah 2: Analisis hasil</strong><a class="headerlink" href="#langkah-2-analisis-hasil" title="Link to this heading">#</a></h2>
+<p>Karena hasilnya <strong><span class="math notranslate nohighlight">\(0 = 0\)</span></strong> (persamaan identik), maka:</p>
+<ul class="simple">
+<li><p>Kedua persamaan merepresentasikan <strong>garis yang sama</strong></p></li>
+<li><p>Sistem memiliki <strong>tak hingga banyak solusi</strong></p></li>
+</ul>
+<p>Dari persamaan pertama:
+$<span class="math notranslate nohighlight">\(
+\begin{array}{rcl}
+3x - 2y &amp; = &amp; 6 \\
+-2y &amp; = &amp; 6 - 3x \\
+y &amp; = &amp; \frac{6 - 3x}{-2} \\
+y &amp; = &amp; \frac{3x - 6}{2} \\
+y &amp; = &amp; \frac{3}{2}x - 3
+\end{array}
+\)</span>$</p>
+</section>
+<section id="id3">
+<h2><strong>Jawaban:</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\boxed{x = \text{bebas}, \quad y = \frac{3}{2}x - 3}\]</div>
+<p>Secara umum, kita dapat mengatakan bahwa suatu sistem linier adalah
+konsisten jika memiliki paling sedikit satu solusi, dan inkonsisten jika tidak
+memiliki solusi. Dengan demikian, suatu persamaan linier konsisten dari
+dua persamaan dengan dua variabel yang tidak diketahui memiliki satu
+solusi atau solusi tak hingga. Hal tersebut berlaku pula untuk sistem linier
+dengan tiga variabel yang tidak diketahui.</p>
+<p>##<strong>Perluasan Matriks dan Operasi Baris Elementer</strong>
+Semakin banyak persamaan dan variabel yang tidak diketahuinya, semakin
+kompleks aljabar yang terlibat dalam menentukan solusinya. Perhitungan
+yang dibutuhkan dapat lebih dikelola dengan menyederhanakan notasi dan
+prosedur standar. Sebagai contoh, tanda +, x dan – dalam sistem linier tidak
+dituliskan tetapi tetap dijaga secara mental.
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &amp;= b_1 \\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &amp;= b_2 \\
+&amp;\vdots \\
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &amp;= b_m
+\end{aligned}
+\)</span>$</p>
+<p>Kita dapat menyingkat sistem dengan hanya menuliskan angka-angka dalam matriks, yaitu:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[
+\begin{array}{cccc|c}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} &amp; b_1 \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} &amp; b_2 \\
+\vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} &amp; b_m
+\end{array}
+\right]
+\end{split}\]</div>
+<p>Bentuk ini disebut matrik perluasan untuk sistem. Sebagai contoh, matriks perluasan untuk sistem persamaan berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x_1 + x_2 + 2x_3 &amp;= 9 \\
+2x_1 + 4x_2 - 3x_3 &amp;= 1 \\
+3x_1 + 6x_2 - 5x_3 &amp;= 0
+\end{aligned}
+\end{split}\]</div>
+<p>Adalah</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[
+\begin{array}{ccc|c}
+1 &amp; 1 &amp; 2 &amp; 9 \\
+2 &amp; 4 &amp; -3 &amp; 1 \\
+3 &amp; 6 &amp; -5 &amp; 0
+\end{array}
+\right]
+\end{split}\]</div>
+<p>Karena baris (garis horizontal) dari matriks yang diperluas sesuai dengan
+persamaan dalam sistem yang terkait, ketiga operasi ini sesuai dengan
+operasi berikut pada baris matriks yang diperluas:</p>
+<ol class="arabic simple">
+<li><p>Kalikan sebuah oleh konstanta bukan nol.</p></li>
+<li><p>Tukar dua baris.</p></li>
+<li><p>Kalikan sebuah konstanta ke satu baris dan tambahkan ke baris lainnya.
+Ini disebut operasi baris elementer pada matriks.
+disini saya akan memebrikan contoh menggunakan barisan elementer dengan contoh soal berikut:
+$<span class="math notranslate nohighlight">\(
+x + y + 2z = 9 \\
+2x + 4y - 3z = 1 \\
+3x + 6y - 5z = 0
+\)</span>$</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">IFrame</span><span class="p">,</span> <span class="n">display</span>
+
+<span class="c1"># Tampilkan GeoGebra dengan IFrame</span>
+<span class="n">display</span><span class="p">(</span><span class="n">IFrame</span><span class="p">(</span>
+    <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.geogebra.org/calculator/mppzzuhs?embed&quot;</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">600</span>
+<span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="600"
+            src="https://www.geogebra.org/calculator/mppzzuhs?embed"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="c1"># Matriks Augmented untuk sistem:</span>
+<span class="c1"># x + y + 2z = 9</span>
+<span class="c1"># 2x + 4y - 3z = 1</span>
+<span class="c1"># 3x + 6y - 5z = 0</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks Augmented Awal:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># Lakukan OBE menggunakan rref</span>
+<span class="n">solusi_matriks</span><span class="p">,</span> <span class="n">pivot</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">rref</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah RREF:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">solusi_matriks</span><span class="p">)</span>
+
+<span class="c1"># Ambil solusi</span>
+<span class="n">x_val</span> <span class="o">=</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">y_val</span> <span class="o">=</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">z_val</span> <span class="o">=</span> <span class="n">solusi_matriks</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Solusi:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y = </span><span class="si">{</span><span class="n">y_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;z = </span><span class="si">{</span><span class="n">z_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks Augmented Awal:
+Matrix([[1, 1, 2, 9], [2, 4, -3, 1], [3, 6, -5, 0]])
+
+Matriks setelah RREF:
+Matrix([[1, 0, 0, 1], [0, 1, 0, 2], [0, 0, 1, 3]])
+
+Solusi:
+x = 1
+y = 2
+z = 3
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="penyelesaian-sistem-persamaan-linier">
+<h1>Penyelesaian Sistem Persamaan Linier<a class="headerlink" href="#penyelesaian-sistem-persamaan-linier" title="Link to this heading">#</a></h1>
+<section id="soal">
+<h2>Soal<a class="headerlink" href="#soal" title="Link to this heading">#</a></h2>
+<p>Selesaikan sistem persamaan berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+x + y + 2z = 9 \\
+2x + 4y - 3z = 1 \\
+3x + 6y - 5z = 0
+\end{cases}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="matriks-augmented">
+<h2>Matriks Augmented<a class="headerlink" href="#matriks-augmented" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[\begin{array}{ccc|c}
+1 &amp; 1 &amp; 2 &amp; 9 \\
+2 &amp; 4 &amp; -3 &amp; 1 \\
+3 &amp; 6 &amp; -5 &amp; 0
+\end{array}\right]
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="langkah-penyelesaian-eliminasi-gauss-rref">
+<h2>Langkah Penyelesaian (Eliminasi Gauss - RREF)<a class="headerlink" href="#langkah-penyelesaian-eliminasi-gauss-rref" title="Link to this heading">#</a></h2>
+<section id="langkah-1-eliminasi-baris-2-dan-3">
+<h3>Langkah 1: Eliminasi baris 2 dan 3<a class="headerlink" href="#langkah-1-eliminasi-baris-2-dan-3" title="Link to this heading">#</a></h3>
+<p><strong>Baris 2</strong> → <span class="math notranslate nohighlight">\(R_2 - 2R_1\)</span>:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+2 - 2(1) &amp;= 0 \\
+4 - 2(1) &amp;= 2 \\
+-3 - 2(2) &amp;= -7 \\
+1 - 2(9) &amp;= -17
+\end{aligned}
+\)</span>$</p>
+<p><strong>Baris 3</strong> → <span class="math notranslate nohighlight">\(R_3 - 3R_1\)</span>:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+3 - 3(1) &amp;= 0 \\
+6 - 3(1) &amp;= 3 \\
+-5 - 3(2) &amp;= -11 \\
+0 - 3(9) &amp;= -27
+\end{aligned}
+\)</span>$</p>
+<p>Hasil:
+$<span class="math notranslate nohighlight">\(
+\left[\begin{array}{ccc|c}
+1 &amp; 1 &amp; 2 &amp; 9 \\
+0 &amp; 2 &amp; -7 &amp; -17 \\
+0 &amp; 3 &amp; -11 &amp; -27
+\end{array}\right]
+\)</span>$</p>
+</section>
+<section id="langkah-2-normalisasi-baris-2">
+<h3>Langkah 2: Normalisasi Baris 2<a class="headerlink" href="#langkah-2-normalisasi-baris-2" title="Link to this heading">#</a></h3>
+<p><strong>Baris 2</strong> → <span class="math notranslate nohighlight">\(\frac{1}{2}R_2\)</span>:
+$<span class="math notranslate nohighlight">\(
+\left[\begin{array}{ccc|c}
+1 &amp; 1 &amp; 2 &amp; 9 \\
+0 &amp; 1 &amp; -\frac{7}{2} &amp; -\frac{17}{2} \\
+0 &amp; 3 &amp; -11 &amp; -27
+\end{array}\right]
+\)</span>$</p>
+</section>
+<section id="langkah-3-eliminasi-baris-3">
+<h3>Langkah 3: Eliminasi Baris 3<a class="headerlink" href="#langkah-3-eliminasi-baris-3" title="Link to this heading">#</a></h3>
+<p><strong>Baris 3</strong> → <span class="math notranslate nohighlight">\(R_3 - 3R_2\)</span>:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+3 - 3(1) &amp;= 0 \\
+-11 - 3(-\frac{7}{2}) &amp;= -11 + \frac{21}{2} = -\frac{1}{2} \\
+-27 - 3(-\frac{17}{2}) &amp;= -27 + \frac{51}{2} = -\frac{3}{2}
+\end{aligned}
+\)</span>$</p>
+<p>Hasil:
+$<span class="math notranslate nohighlight">\(
+\left[\begin{array}{ccc|c}
+1 &amp; 1 &amp; 2 &amp; 9 \\
+0 &amp; 1 &amp; -\frac{7}{2} &amp; -\frac{17}{2} \\
+0 &amp; 0 &amp; -\frac{1}{2} &amp; -\frac{3}{2}
+\end{array}\right]
+\)</span>$</p>
+</section>
+<section id="langkah-4-normalisasi-baris-3">
+<h3>Langkah 4: Normalisasi Baris 3<a class="headerlink" href="#langkah-4-normalisasi-baris-3" title="Link to this heading">#</a></h3>
+<p><strong>Baris 3</strong> → <span class="math notranslate nohighlight">\(-2R_3\)</span>:
+$<span class="math notranslate nohighlight">\(
+\left[\begin{array}{ccc|c}
+1 &amp; 1 &amp; 2 &amp; 9 \\
+0 &amp; 1 &amp; -\frac{7}{2} &amp; -\frac{17}{2} \\
+0 &amp; 0 &amp; 1 &amp; 3
+\end{array}\right]
+\)</span>$</p>
+</section>
+<section id="langkah-5-eliminasi-ke-atas-back-substitution">
+<h3>Langkah 5: Eliminasi ke atas (Back Substitution)<a class="headerlink" href="#langkah-5-eliminasi-ke-atas-back-substitution" title="Link to this heading">#</a></h3>
+<p><strong>Baris 2</strong> → <span class="math notranslate nohighlight">\(R_2 + \frac{7}{2}R_3\)</span>:
+$<span class="math notranslate nohighlight">\(
+\left[\begin{array}{ccc|c}
+1 &amp; 1 &amp; 2 &amp; 9 \\
+0 &amp; 1 &amp; 0 &amp; 2 \\
+0 &amp; 0 &amp; 1 &amp; 3
+\end{array}\right]
+\)</span>$</p>
+<p><strong>Baris 1</strong> → <span class="math notranslate nohighlight">\(R_1 - 2R_3\)</span>:
+$<span class="math notranslate nohighlight">\(
+\left[\begin{array}{ccc|c}
+1 &amp; 1 &amp; 0 &amp; 3 \\
+0 &amp; 1 &amp; 0 &amp; 2 \\
+0 &amp; 0 &amp; 1 &amp; 3
+\end{array}\right]
+\)</span>$</p>
+<p><strong>Baris 1</strong> → <span class="math notranslate nohighlight">\(R_1 - R_2\)</span>:
+$<span class="math notranslate nohighlight">\(
+\left[\begin{array}{ccc|c}
+1 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0 &amp; 2 \\
+0 &amp; 0 &amp; 1 &amp; 3
+\end{array}\right]
+\)</span>$</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="matriks-rref-reduced-row-echelon-form">
+<h2>Matriks RREF (Reduced Row Echelon Form)<a class="headerlink" href="#matriks-rref-reduced-row-echelon-form" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[\begin{array}{ccc|c}
+\mathbf{1} &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; \mathbf{1} &amp; 0 &amp; 2 \\
+0 &amp; 0 &amp; \mathbf{1} &amp; 3
+\end{array}\right]
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="kesimpulan">
+<h2>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>
+<p>Dari matriks RREF, diperoleh solusi:</p>
+<div class="math notranslate nohighlight">
+\[\boxed{x = 1, \quad y = 2, \quad z = 3}\]</div>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Verifikasi<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p><strong>Persamaan 1:</strong> <span class="math notranslate nohighlight">\(1 + 2 + 2(3) = 1 + 2 + 6 = 9\)</span> ✓</p>
+<p><strong>Persamaan 2:</strong> <span class="math notranslate nohighlight">\(2(1) + 4(2) - 3(3) = 2 + 8 - 9 = 1\)</span> ✓</p>
+<p><strong>Persamaan 3:</strong> <span class="math notranslate nohighlight">\(3(1) + 6(2) - 5(3) = 3 + 12 - 15 = 0\)</span> ✓</p>
+</section>
+<hr class="docutils" />
+<section id="himpunan-penyelesaian">
+<h2>Himpunan Penyelesaian<a class="headerlink" href="#himpunan-penyelesaian" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[HP = \{(1, 2, 3)\}\]</div>
+<p>Sistem ini memiliki <strong>solusi tunggal</strong> (konsisten dan independen).</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Materi Kal</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Eliminasi_Gussian_3variabel%264variabel.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Langkah 1: Eliminasi Kolom Pertama</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Penyelesaian:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban">Jawaban:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#verifikasi">Verifikasi:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Penyelesaian:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Penyelesaian</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-eliminasi-variabel-y"><strong>Langkah 1: Eliminasi variabel <span class="math notranslate nohighlight">\(y\)</span></strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-analisis-hasil"><strong>Langkah 2: Analisis hasil</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Jawaban:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linier">Penyelesaian Sistem Persamaan Linier</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal">Soal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-augmented">Matriks Augmented</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-penyelesaian-eliminasi-gauss-rref">Langkah Penyelesaian (Eliminasi Gauss - RREF)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-eliminasi-baris-2-dan-3">Langkah 1: Eliminasi baris 2 dan 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-normalisasi-baris-2">Langkah 2: Normalisasi Baris 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-eliminasi-baris-3">Langkah 3: Eliminasi Baris 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-normalisasi-baris-3">Langkah 4: Normalisasi Baris 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-eliminasi-ke-atas-back-substitution">Langkah 5: Eliminasi ke atas (Back Substitution)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-rref-reduced-row-echelon-form">Matriks RREF (Reduced Row Echelon Form)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Verifikasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#himpunan-penyelesaian">Himpunan Penyelesaian</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
