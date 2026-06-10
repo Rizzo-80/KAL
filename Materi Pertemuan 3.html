@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Eliminasi Gaussian &#8212; My sample book</title>
+    <title>Materi Pertemuan 3 Eliminasi Gaussian &#8212; My sample book</title>
   
   
   
@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Markdown Files" href="markdown.html" />
-    <link rel="prev" title="Materi Pertemuan 2" href="Materi%20Pertemuan%202.html" />
+    <link rel="prev" title="Materi Pertemuan 2 Sistem Persamaan Linear" href="Materi%20Pertemuan%202.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -183,10 +183,9 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Profil%20Saya.html">Profil Mahasiswa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%201.html">Materi Pertemuan 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%202.html">Materi Pertemuan 2</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Eliminasi Gaussian</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%201.html">Materi Pertemuan 1 Pengertian KAL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%202.html">Materi Pertemuan 2 Sistem Persamaan Linear</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Materi Pertemuan 3 Eliminasi Gaussian</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 </ul>
 
@@ -373,7 +372,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Eliminasi Gaussian</h1>
+    <h1>Materi Pertemuan 3 Eliminasi Gaussian</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -383,14 +382,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Eliminasi Gaussian</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-matriks">Definition. Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-matriks-augmentasi">Definition. Matriks Augmentasi</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-bentuk-eselon-baris">Matriks Bentuk Eselon Baris</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-bentuk-eselon-baris">Definition. Bentuk Eselon Baris</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Eliminasi Gaussian</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gaussian">Eliminasi Gaussian</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-operasi-baris-elementer-pada-matriks">Definition. Operasi Baris Elementer pada Matriks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-algoritma-eliminasi-gaussian">Definition. Algoritma Eliminasi Gaussian</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-algoritma-eliminasi-gauss-jordan">Definition. Algoritma Eliminasi Gauss-Jordan</a></li>
@@ -400,10 +398,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-rescale-row-i-a">1. <code class="docutils literal notranslate"><span class="pre">A.rescale_row(i,</span> <span class="pre">a)</span></code></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#studi-kasus-eliminasi-gaussian-spl-4x4">Studi Kasus: Eliminasi Gaussian SPL 4x4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-sistem-persamaan-linear-dan-matriks-augmented">Representasi Sistem Persamaan Linear dan Matriks Augmented</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#studi-kasus-eliminasi-gaussian-spl-4x4">Studi Kasus: Eliminasi Gaussian SPL 4x4</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-sistem-persamaan-linear-dan-matriks-augmented">Representasi Sistem Persamaan Linear dan Matriks Augmented</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-transformasi-operasi-baris-elementer-obe">Proses Transformasi Operasi Baris Elementer (OBE)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-1-analisis-pivot-kolom-pertama-dan-eliminasi-baris-di-bawahnya">Tahap 1: Analisis Pivot Kolom Pertama dan Eliminasi Baris di Bawahnya</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-2-analisis-kolom-kedua-dan-ketiga">Tahap 2: Analisis Kolom Kedua dan Ketiga</a></li>
@@ -413,9 +411,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-himpunan-penyelesaian">Kesimpulan Himpunan Penyelesaian</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validasi-logika-menggunakan-kode-python-numpy">Validasi Logika Menggunakan Kode Python (NumPy)</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -426,8 +421,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="eliminasi-gaussian">
-<h1>Eliminasi Gaussian<a class="headerlink" href="#eliminasi-gaussian" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="materi-pertemuan-3-eliminasi-gaussian">
+<h1>Materi Pertemuan 3 Eliminasi Gaussian<a class="headerlink" href="#materi-pertemuan-3-eliminasi-gaussian" title="Link to this heading">#</a></h1>
 <p>Pada bagian sebelumnya, kita telah menjelaskan bagaimana cara menyelesaikan sistem linear <span class="math notranslate nohighlight">\(L\)</span>. Prosedur tersebut melibatkan penerapan serangkaian operasi baris pada <span class="math notranslate nohighlight">\(L\)</span> untuk memperoleh sistem <span class="math notranslate nohighlight">\(L'\)</span> yang “lebih sederhana”.</p>
 <p>Pada bagian ini kita akan memberikan penjelasan lebih detail yaitu bagaimana:</p>
 <ol class="arabic simple">
@@ -479,8 +474,8 @@ a_{m1} &amp; a_{m2} &amp; \dots &amp; a_{mn} &amp; \big| &amp; b_m
 </section>
 </section>
 <hr class="docutils" />
-<section id="id1">
-<h2>Eliminasi Gaussian<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="eliminasi-gaussian">
+<h2>Eliminasi Gaussian<a class="headerlink" href="#eliminasi-gaussian" title="Link to this heading">#</a></h2>
 <p>Prosedur sistematis yang disebut <strong>eliminasi Gaussian</strong> memungkinkan kita mereduksi sistem linear <span class="math notranslate nohighlight">\(L\)</span> menjadi sistem <span class="math notranslate nohighlight">\(L'\)</span> dalam bentuk eselon baris dengan melakukan <strong>Operasi Baris Elementer (OBE)</strong>.</p>
 <section id="definition-operasi-baris-elementer-pada-matriks">
 <h3>Definition. Operasi Baris Elementer pada Matriks<a class="headerlink" href="#definition-operasi-baris-elementer-pada-matriks" title="Link to this heading">#</a></h3>
@@ -524,13 +519,12 @@ a_{m1} &amp; a_{m2} &amp; \dots &amp; a_{mn} &amp; \big| &amp; b_m
 </div>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="studi-kasus-eliminasi-gaussian-spl-4x4">
-<h1>Studi Kasus: Eliminasi Gaussian SPL 4x4<a class="headerlink" href="#studi-kasus-eliminasi-gaussian-spl-4x4" title="Link to this heading">#</a></h1>
+<section id="studi-kasus-eliminasi-gaussian-spl-4x4">
+<h2>Studi Kasus: Eliminasi Gaussian SPL 4x4<a class="headerlink" href="#studi-kasus-eliminasi-gaussian-spl-4x4" title="Link to this heading">#</a></h2>
 <p>Halaman ini membahas penyelesaian Sistem Persamaan Linear (SPL) dengan ordo <span class="math notranslate nohighlight">\(4 \times 4\)</span> menggunakan metode Eliminasi Gaussian hingga menghasilkan bentuk eselon baris tereduksi.</p>
 <hr class="docutils" />
 <section id="representasi-sistem-persamaan-linear-dan-matriks-augmented">
-<h2>Representasi Sistem Persamaan Linear dan Matriks Augmented<a class="headerlink" href="#representasi-sistem-persamaan-linear-dan-matriks-augmented" title="Link to this heading">#</a></h2>
+<h3>Representasi Sistem Persamaan Linear dan Matriks Augmented<a class="headerlink" href="#representasi-sistem-persamaan-linear-dan-matriks-augmented" title="Link to this heading">#</a></h3>
 <p>Misalkan kita memiliki sistem persamaan linear <span class="math notranslate nohighlight">\(4 \times 4\)</span> sebagai berikut:</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(x_1 + x_2 + x_3 + x_4 = 10\)</span></p></li>
@@ -546,6 +540,7 @@ a_{m1} &amp; a_{m2} &amp; \dots &amp; a_{mn} &amp; \big| &amp; b_m
 1 &amp; 2 &amp; 3 &amp; 2 &amp; \big| &amp; 19 \\
 1 &amp; 1 &amp; 1 &amp; 2 &amp; \big| &amp; 12
 \end{bmatrix}\end{split}\]</div>
+</section>
 </section>
 <hr class="docutils" />
 <section id="proses-transformasi-operasi-baris-elementer-obe">
@@ -714,7 +709,7 @@ x4 = 2.0
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Materi Pertemuan 2</p>
+        <p class="prev-next-title">Materi Pertemuan 2 Sistem Persamaan Linear</p>
       </div>
     </a>
     <a class="right-next"
@@ -742,14 +737,13 @@ x4 = 2.0
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Eliminasi Gaussian</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-matriks">Definition. Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-matriks-augmentasi">Definition. Matriks Augmentasi</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-bentuk-eselon-baris">Matriks Bentuk Eselon Baris</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-bentuk-eselon-baris">Definition. Bentuk Eselon Baris</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Eliminasi Gaussian</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gaussian">Eliminasi Gaussian</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-operasi-baris-elementer-pada-matriks">Definition. Operasi Baris Elementer pada Matriks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-algoritma-eliminasi-gaussian">Definition. Algoritma Eliminasi Gaussian</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-algoritma-eliminasi-gauss-jordan">Definition. Algoritma Eliminasi Gauss-Jordan</a></li>
@@ -759,10 +753,10 @@ x4 = 2.0
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-rescale-row-i-a">1. <code class="docutils literal notranslate"><span class="pre">A.rescale_row(i,</span> <span class="pre">a)</span></code></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#studi-kasus-eliminasi-gaussian-spl-4x4">Studi Kasus: Eliminasi Gaussian SPL 4x4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-sistem-persamaan-linear-dan-matriks-augmented">Representasi Sistem Persamaan Linear dan Matriks Augmented</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#studi-kasus-eliminasi-gaussian-spl-4x4">Studi Kasus: Eliminasi Gaussian SPL 4x4</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-sistem-persamaan-linear-dan-matriks-augmented">Representasi Sistem Persamaan Linear dan Matriks Augmented</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-transformasi-operasi-baris-elementer-obe">Proses Transformasi Operasi Baris Elementer (OBE)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-1-analisis-pivot-kolom-pertama-dan-eliminasi-baris-di-bawahnya">Tahap 1: Analisis Pivot Kolom Pertama dan Eliminasi Baris di Bawahnya</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-2-analisis-kolom-kedua-dan-ketiga">Tahap 2: Analisis Kolom Kedua dan Ketiga</a></li>
@@ -772,9 +766,6 @@ x4 = 2.0
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-himpunan-penyelesaian">Kesimpulan Himpunan Penyelesaian</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validasi-logika-menggunakan-kode-python-numpy">Validasi Logika Menggunakan Kode Python (NumPy)</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
