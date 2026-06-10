@@ -1,0 +1,78 @@
+Traceback (most recent call last):
+  File "C:\Users\Rizal Maulana\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Rizal Maulana\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\nbclient\client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Rizal Maulana\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Rizal Maulana\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "C:\Users\Rizal Maulana\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\Rizal Maulana\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 1. Load gambar dalam mode grayscale (hitam putih)
+img = cv2.imread('nama_gambar_kamu.jpg', cv2.IMREAD_GRAYSCALE)
+
+# 2. Terapkan SVD
+U, S, Vt = np.linalg.svd(img, full_matrices=False)
+
+# 3. Tentukan nilai k (jumlah komponen nilai singular yang dipertahankan)
+k_values = [5, 20, 50, 100]
+
+plt.figure(figsize=(12, 8))
+
+# Tampilkan gambar asli
+plt.subplot(2, 3, 1)
+plt.title("Gambar Asli")
+plt.imshow(img, cmap='gray')
+plt.axis('off')
+
+# Rekonstruksi gambar untuk setiap nilai k
+for i, k in enumerate(k_values):
+    # Ambil komponen k pertama
+        U_k = U[:, :k]
+    S_k = np.diag(S[:k])
+    Vt_k = Vt[:k, :]
+    
+    # Rekonstruksi matriks gambar
+    img_compressed = np.dot(U_k, np.dot(S_k, Vt_k))
+    
+    # Plot hasil
+    plt.subplot(2, 3, i + 2)
+    plt.title(f"Kompresi dengan k = {k}")
+    plt.imshow(img_compressed, cmap='gray')
+    plt.axis('off')
+
+plt.tight_layout()
+plt.show()
+------------------
+
+
+  [36mFile [39m[32m<string>:26[39m
+[31m    [39m[31mS_k = np.diag(S[:k])[39m
+                        ^
+[31mIndentationError[39m[31m:[39m unindent does not match any outer indentation level
+
+
