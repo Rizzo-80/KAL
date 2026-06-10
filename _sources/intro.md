@@ -1,11 +1,9 @@
-# Welcome to your Jupyter Book
+# Selamat Datang Di Jupyter Book saya
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Puji syukur kehadirat Allah SWT, sehingga dokumentasi materi kuliah ini dapat disusun dengan baik.
 
-Check out the content pages bundled with this sample book to see more.
+Pada kesempatan kali ini, saya akan mempelajari **Komputasi Aljabar Linear** pada Semester 2 di **Universitas Trunojoyo Madura**. Mata kuliah ini diampu oleh Dosen **Bapak Mula'ab, S.Si., M.Kom.**.
 
-```{tableofcontents}
-```
+Melalui halaman Jupyter Book ini, seluruh tugas kuliah, studi kasus matriks, transformasi linear, hingga tahapan eksperimen algoritma akan didokumentasikan secara terstruktur sebagai portofolio pembelajaran selama satu semester penuh.
+
+Selamat membaca dan mengeksplorasi!

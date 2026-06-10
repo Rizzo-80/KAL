@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Materi 1 Pengertian KAL &#8212; My sample book</title>
+    <title>Materi 4 Determinan &#8212; My sample book</title>
   
   
   
@@ -59,11 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Materi Pertemuan 1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Materi Pertemuan 4';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Materi 2 Sistem Persamaan Linear" href="Materi%20Pertemuan%202.html" />
-    <link rel="prev" title="Profil Mahasiswa" href="Profil%20Saya.html" />
+    <link rel="next" title="Penyelesaian Matriks 4x4" href="Tugas%20Invers.html" />
+    <link rel="prev" title="Materi 3 Eliminasi Gaussian" href="Materi%20Pertemuan%203.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -183,10 +183,10 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Profil%20Saya.html">Profil Mahasiswa</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Materi 1 Pengertian KAL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%201.html">Materi 1 Pengertian KAL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%202.html">Materi 2 Sistem Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%203.html">Materi 3 Eliminasi Gaussian</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%204.html">Materi 4 Determinan</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Materi 4 Determinan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas%20Invers.html">Penyelesaian Matriks 4x4</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 </ul>
@@ -260,7 +260,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMateri Pertemuan 1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMateri Pertemuan 4.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -290,7 +290,7 @@
       
       
       
-      <li><a href="_sources/Materi Pertemuan 1.ipynb" target="_blank"
+      <li><a href="_sources/Materi Pertemuan 4.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -374,7 +374,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Materi 1 Pengertian KAL</h1>
+    <h1>Materi 4 Determinan</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -384,15 +384,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-komputasi-aljabar-linear-penting">Mengapa Komputasi Aljabar Linear Penting?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topik-utama-yang-dipelajari">Topik Utama yang Dipelajari</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-aljabar-linear-ordo-2x2">Contoh Soal Aljabar Linear (Ordo 2x2)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal">Soal:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-bentuk-matriks">1. Representasi Bentuk Matriks</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-visualisasi-di-geogebra">2. Cara Visualisasi di GeoGebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komputasi-determinan-dengan-ekspansi-baris-dan-kolom">Komputasi Determinan dengan Ekspansi Baris dan Kolom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-teori">Penjelasan Teori</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pendekatan-ekspansi-baris">1. Pendekatan Ekspansi Baris</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pendekatan-ekspansi-kolom">2. Pendekatan Ekspansi Kolom</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-menggunakan-kode-python-numpy">4. Implementasi Menggunakan Kode Python (NumPy)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-dan-penyelesaian-manual">Contoh Soal dan Penyelesaian Manual</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternatif-a-menghitung-menggunakan-ekspansi-baris-pertama">Alternatif A: Menghitung Menggunakan Ekspansi Baris Pertama</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternatif-b-menghitung-menggunakan-ekspansi-kolom-pertama">Alternatif B: Menghitung Menggunakan Ekspansi Kolom Pertama</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-validasi-menggunakan-python-numpy">Implementasi Validasi Menggunakan Python (NumPy)</a></li>
 </ul>
             </nav>
         </div>
@@ -404,101 +407,120 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="materi-1-pengertian-kal">
-<h1>Materi 1 Pengertian KAL<a class="headerlink" href="#materi-1-pengertian-kal" title="Link to this heading">#</a></h1>
-<p><strong>Komputasi Aljabar Linear</strong> adalah cabang ilmu yang menggabungkan teori matematika Aljabar Linear dengan algoritma komputer untuk menyelesaikan perhitungan matriks dan vektor dalam skala yang sangat besar.</p>
-<p>Jika dalam kelas teori kita menghitung matriks ukuran <span class="math notranslate nohighlight">\(2 \times 2\)</span> atau <span class="math notranslate nohighlight">\(3 \times 3\)</span> secara manual menggunakan kertas dan pulpen, maka dalam <strong>Komputasi</strong> Aljabar Linear, kita menggunakan bahasa pemrograman (seperti <strong>Python</strong>) untuk menghitung matriks berukuran ribuan hingga jutaan baris dan kolom secara instan.</p>
-<section id="mengapa-komputasi-aljabar-linear-penting">
-<h2>Mengapa Komputasi Aljabar Linear Penting?<a class="headerlink" href="#mengapa-komputasi-aljabar-linear-penting" title="Link to this heading">#</a></h2>
-<p>Hampir semua teknologi modern di bidang Sains Data dan Informatika dibangun di atas pondasi Aljabar Linear yang dikomputerisasi. Berikut adalah beberapa alasan utamanya:</p>
-<ul class="simple">
-<li><p><strong>Pondasi Data Science &amp; Machine Learning:</strong> Data seperti gambar, teks, dan suara akan diubah oleh komputer menjadi tumpukan angka berbentuk matriks. Algoritma seperti <em>K-Nearest Neighbors</em> (K-NN) atau <em>Neural Networks</em> bekerja dengan cara mengalikan matriks-matriks tersebut.</p></li>
-<li><p><strong>Pemrosesan Gambar (Image Processing):</strong> Sebuah foto digital sebenarnya adalah matriks besar, di mana setiap elemen matriksnya menyimpan nilai warna (pixel). Proses filter, rotasi, atau kompresi gambar semuanya menggunakan operasi matriks.</p></li>
-<li><p><strong>Sistem Persamaan Linear Skala Besar:</strong> Digunakan untuk memprediksi data, analisis jaringan, hingga grafika komputer 3D (seperti pada <em>game engine</em>).</p></li>
-</ul>
-</section>
-<section id="topik-utama-yang-dipelajari">
-<h2>Topik Utama yang Dipelajari<a class="headerlink" href="#topik-utama-yang-dipelajari" title="Link to this heading">#</a></h2>
-<p>Dalam mata kuliah ini, fokus utama kita adalah mengimplementasikan teori-teori berikut ke dalam kode program:</p>
-<ol class="arabic simple">
-<li><p><strong>Sistem Persamaan Linear (SPL):</strong> Menyelesaikan nilai variabel tak diketahui menggunakan metode seperti Eliminasi Gauss atau Gauss-Jordan.</p></li>
-<li><p><strong>Operasi Matriks &amp; Vektor:</strong> Perkalian matriks, translasi, dan transformasi linear.</p></li>
-<li><p><strong>Determinan dan Invers Matriks:</strong> Menghitung nilai karakteristik matriks dan mencari kebalikan matriks untuk menyelesaikan persamaan matematika.</p></li>
-<li><p><strong>Nilai Eigen dan Vektor Eigen (Eigenvalues &amp; Eigenvectors):</strong> Digunakan untuk reduksi dimensi data dan algoritma rekomendasi.</p></li>
-</ol>
-<blockquote>
-<div><p><strong>Kesimpulan:</strong> &gt; Komputasi Aljabar Linear bukan sekadar menghitung angka, melainkan bagaimana kita menerjemahkan data dunia nyata menjadi bentuk matriks, lalu menyuruh komputer menyelesaikannya dengan cepat dan akurat.</p>
-</div></blockquote>
-</section>
-<section id="contoh-soal-aljabar-linear-ordo-2x2">
-<h2>Contoh Soal Aljabar Linear (Ordo 2x2)<a class="headerlink" href="#contoh-soal-aljabar-linear-ordo-2x2" title="Link to this heading">#</a></h2>
-<p>Berikut adalah contoh soal Sistem Persamaan Linear (SPL) dua variabel yang biasa diselesaikan menggunakan operasi matriks ordo <span class="math notranslate nohighlight">\(2 \times 2\)</span>.</p>
-<section id="soal">
-<h3>Soal:<a class="headerlink" href="#soal" title="Link to this heading">#</a></h3>
-<p>Tentukan nilai <span class="math notranslate nohighlight">\(x\)</span> dan <span class="math notranslate nohighlight">\(y\)</span> dari sistem persamaan berikut:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(2x + y = 5\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(x + 3y = 5\)</span></p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="materi-4-determinan">
+<h1>Materi 4 Determinan<a class="headerlink" href="#materi-4-determinan" title="Link to this heading">#</a></h1>
+<section id="komputasi-determinan-dengan-ekspansi-baris-dan-kolom">
+<h2>Komputasi Determinan dengan Ekspansi Baris dan Kolom<a class="headerlink" href="#komputasi-determinan-dengan-ekspansi-baris-dan-kolom" title="Link to this heading">#</a></h2>
+<p>Halaman ini membahas secara mendalam konsep perhitungan nilai determinan matriks persegi menggunakan metode Ekspansi Kofaktor (Laplace), baik melalui pendekatan ekspansi baris maupun ekspansi kolom.</p>
 </section>
 <hr class="docutils" />
-<section id="representasi-bentuk-matriks">
-<h3>1. Representasi Bentuk Matriks<a class="headerlink" href="#representasi-bentuk-matriks" title="Link to this heading">#</a></h3>
-<p>Persamaan linear di atas jika diubah ke dalam bentuk matriks (<span class="math notranslate nohighlight">\(Ax = B\)</span>) menjadi:</p>
+<section id="penjelasan-teori">
+<h2>Penjelasan Teori<a class="headerlink" href="#penjelasan-teori" title="Link to this heading">#</a></h2>
+<p>Metode Ekspansi Kofaktor digunakan untuk menghitung determinan matriks berordo besar (seperti <span class="math notranslate nohighlight">\(3 \times 3\)</span> atau lebih) dengan cara memecahnya menjadi sub-matriks yang lebih kecil (minor). Dalam perhitungannya, kita bebas memilih untuk menghitung sepanjang <strong>satu baris</strong> atau <strong>satu kolom</strong> mana saja karena hasil akhirnya akan selalu sama.</p>
+<p>Setiap elemen yang dipilih akan dikalikan dengan nilai <strong>Kofaktor (<span class="math notranslate nohighlight">\(C_{ij}\)</span>)</strong> miliknya, yang dirumuskan sebagai:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{pmatrix} 2 &amp; 1 \\ 1 &amp; 3 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 5 \\ 5 \end{pmatrix}\end{split}\]</div>
+\[C_{ij} = (-1)^{i+j} M_{ij}\]</div>
+<ul>
+<li><p><strong>Aturan Tanda <span class="math notranslate nohighlight">\((-1)^{i+j}\)</span>:</strong> Menghasilkan pola tanda plus-minus yang berselang-seling seperti papan catur. Untuk matriks <span class="math notranslate nohighlight">\(3 \times 3\)</span>, polanya adalah:
+$$\begin{bmatrix}</p>
 <ul class="simple">
-<li><p><strong>Matriks <span class="math notranslate nohighlight">\(A\)</span>:</strong> <span class="math notranslate nohighlight">\(\begin{pmatrix} 2 &amp; 1 \\ 1 &amp; 3 \end{pmatrix}\)</span></p></li>
-<li><p><strong>Vektor <span class="math notranslate nohighlight">\(B\)</span>:</strong> <span class="math notranslate nohighlight">\(\begin{pmatrix} 5 \\ 5 \end{pmatrix}\)</span></p></li>
+<li><p>&amp; - &amp; + \</p></li>
 </ul>
+<ul class="simple">
+<li><p>&amp; + &amp; - \</p></li>
+</ul>
+<ul class="simple">
+<li><p>&amp; - &amp; +
+\end{bmatrix}$$</p></li>
+</ul>
+</li>
+<li><p><strong>Minor (<span class="math notranslate nohighlight">\(M_{ij}\)</span>):</strong> Nilai determinan dari sub-matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span> yang tersisa setelah kamu menghapus baris ke-<span class="math notranslate nohighlight">\(i\)</span> dan kolom ke-<span class="math notranslate nohighlight">\(j\)</span>.</p></li>
+</ul>
+<section id="pendekatan-ekspansi-baris">
+<h3>1. Pendekatan Ekspansi Baris<a class="headerlink" href="#pendekatan-ekspansi-baris" title="Link to this heading">#</a></h3>
+<p>Ekspansi baris dilakukan dengan cara berjalan mendatar sepanjang elemen baris yang dipilih. Jika kita memilih <strong>Baris Pertama</strong> (<span class="math notranslate nohighlight">\(a_{11}, a_{12}, a_{13}\)</span>), maka rumus determinannya:</p>
+<div class="math notranslate nohighlight">
+\[\det(A) = a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13}\]</div>
+</section>
+<section id="pendekatan-ekspansi-kolom">
+<h3>2. Pendekatan Ekspansi Kolom<a class="headerlink" href="#pendekatan-ekspansi-kolom" title="Link to this heading">#</a></h3>
+<p>Ekspansi kolom dilakukan dengan cara berjalan menurun sepanjang elemen kolom yang dipilih. Jika kita memilih <strong>Kolom Pertama</strong> (<span class="math notranslate nohighlight">\(a_{11}, a_{21}, a_{31}\)</span>), maka rumus determinannya:</p>
+<div class="math notranslate nohighlight">
+\[\det(A) = a_{11}C_{11} + a_{21}C_{21} + a_{31}C_{31}\]</div>
+<p><em>Tips: Ekspansi kolom sangat disarankan jika ada kolom yang memiliki banyak angka nol (<span class="math notranslate nohighlight">\(0\)</span>), karena akan memangkas banyak waktu hitungan.</em></p>
+</section>
 </section>
 <hr class="docutils" />
-<section id="cara-visualisasi-di-geogebra">
-<h3>2. Cara Visualisasi di GeoGebra<a class="headerlink" href="#cara-visualisasi-di-geogebra" title="Link to this heading">#</a></h3>
-<p>Untuk membuktikan jawaban dari soal ini menggunakan GeoGebra, kamu cukup menggambar kedua persamaan tersebut menjadi garis lurus:</p>
-<iframe src="https://www.geogebra.org/calculator/e9k2bkvu?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+<section id="contoh-soal-dan-penyelesaian-manual">
+<h2>Contoh Soal dan Penyelesaian Manual<a class="headerlink" href="#contoh-soal-dan-penyelesaian-manual" title="Link to this heading">#</a></h2>
+<p>Misalkan kita memiliki matriks persegi <span class="math notranslate nohighlight">\(A\)</span> berordo <span class="math notranslate nohighlight">\(3 \times 3\)</span> sebagai berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix}
+3 &amp; 2 &amp; -1 \\
+0 &amp; 4 &amp; 1 \\
+2 &amp; 1 &amp; 5
+\end{bmatrix}\end{split}\]</div>
+<p>Mari kita buktikan bahwa ekspansi baris pertama dan ekspansi kolom pertama menghasilkan nilai determinan yang sama.</p>
+<section id="alternatif-a-menghitung-menggunakan-ekspansi-baris-pertama">
+<h3>Alternatif A: Menghitung Menggunakan Ekspansi Baris Pertama<a class="headerlink" href="#alternatif-a-menghitung-menggunakan-ekspansi-baris-pertama" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\det(A) = a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13}\]</div>
 <ul class="simple">
-<li><p><strong>Hasil Titik Potong:</strong> Kedua garis akan berpotongan persis di titik <strong><span class="math notranslate nohighlight">\((2, 1)\)</span></strong>.</p></li>
-<li><p><strong>Kesimpulan:</strong> Nilai <span class="math notranslate nohighlight">\(x = 2\)</span> dan <span class="math notranslate nohighlight">\(y = 1\)</span> adalah solusi akhir dari soal Aljabar Linear ini.</p></li>
+<li><p><strong>Komponen Elemen <span class="math notranslate nohighlight">\(a_{11} = 3\)</span> (Tanda <span class="math notranslate nohighlight">\(+\)</span>):</strong>
+$<span class="math notranslate nohighlight">\(C_{11} = 1 \cdot \det \begin{bmatrix} 4 &amp; 1 \\ 1 &amp; 5 \end{bmatrix} = (4 \cdot 5) - (1 \cdot 1) = 20 - 1 = 19\)</span>$</p></li>
+<li><p><strong>Komponen Elemen <span class="math notranslate nohighlight">\(a_{12} = 2\)</span> (Tanda <span class="math notranslate nohighlight">\(-\)</span>):</strong>
+$<span class="math notranslate nohighlight">\(C_{12} = -1 \cdot \det \begin{bmatrix} 0 &amp; 1 \\ 2 &amp; 5 \end{bmatrix} = -1 \cdot ((0 \cdot 5) - (1 \cdot 2)) = -1 \cdot (-2) = 2\)</span>$</p></li>
+<li><p><strong>Komponen Elemen <span class="math notranslate nohighlight">\(a_{13} = -1\)</span> (Tanda <span class="math notranslate nohighlight">\(+\)</span>):</strong>
+$<span class="math notranslate nohighlight">\(C_{13} = 1 \cdot \det \begin{bmatrix} 0 &amp; 4 \\ 2 &amp; 1 \end{bmatrix} = (0 \cdot 1) - (4 \cdot 2) = 0 - 8 = -8\)</span>$</p></li>
 </ul>
+<p><strong>Hitung Total Determinan:</strong>
+$<span class="math notranslate nohighlight">\(\det(A) = 3(19) + 2(2) + (-1)(-8)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(\det(A) = 57 + 4 + 8 = 69\)</span>$</p>
+</section>
+<hr class="docutils" />
+<section id="alternatif-b-menghitung-menggunakan-ekspansi-kolom-pertama">
+<h3>Alternatif B: Menghitung Menggunakan Ekspansi Kolom Pertama<a class="headerlink" href="#alternatif-b-menghitung-menggunakan-ekspansi-kolom-pertama" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\det(A) = a_{11}C_{11} + a_{21}C_{21} + a_{31}C_{31}\]</div>
+<ul class="simple">
+<li><p><strong>Komponen Elemen <span class="math notranslate nohighlight">\(a_{11} = 3\)</span> (Tanda <span class="math notranslate nohighlight">\(+\)</span>):</strong>
+Nilai <span class="math notranslate nohighlight">\(C_{11}\)</span> sama dengan perhitungan di atas, yaitu <strong>19</strong>.</p></li>
+<li><p><strong>Komponen Elemen <span class="math notranslate nohighlight">\(a_{21} = 0\)</span> (Tanda <span class="math notranslate nohighlight">\(-\)</span>):</strong>
+Karena elemennya bernilai <span class="math notranslate nohighlight">\(0\)</span>, kita tidak perlu menghitung minor matriksnya karena hasil perkaliannya pasti nol:
+$<span class="math notranslate nohighlight">\(a_{21}C_{21} = 0 \cdot C_{21} = 0\)</span>$</p></li>
+<li><p><strong>Komponen Elemen <span class="math notranslate nohighlight">\(a_{31} = 2\)</span> (Tanda <span class="math notranslate nohighlight">\(+\)</span>):</strong>
+$<span class="math notranslate nohighlight">\(C_{31} = 1 \cdot \det \begin{bmatrix} 2 &amp; -1 \\ 4 &amp; 1 \end{bmatrix} = (2 \cdot 1) - (-1 \cdot 4) = 2 + 4 = 6\)</span>$</p></li>
+</ul>
+<p><strong>Hitung Total Determinan:</strong>
+$<span class="math notranslate nohighlight">\(\det(A) = 3(19) - 0 + 2(6)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(\det(A) = 57 - 0 + 12 = 69\)</span>$</p>
+<p><em>Kesimpulan: Terbukti bahwa baik menggunakan ekspansi baris pertama maupun kolom pertama, nilai determinan matriks <span class="math notranslate nohighlight">\(A\)</span> tetap bernilai <strong>69</strong>.</em></p>
 </section>
 </section>
-<section id="implementasi-menggunakan-kode-python-numpy">
-<h2>4. Implementasi Menggunakan Kode Python (NumPy)<a class="headerlink" href="#implementasi-menggunakan-kode-python-numpy" title="Link to this heading">#</a></h2>
-<p>Untuk menyelesaikan Sistem Persamaan Linear (SPL) dari soal di atas secara otomatis, kita bisa menggunakan bahasa pemrograman Python dengan bantuan <em>library</em> <strong>NumPy</strong>. NumPy menyediakan fungsi khusus bernama <code class="docutils literal notranslate"><span class="pre">np.linalg.solve</span></code> yang dapat mencari nilai variabel <span class="math notranslate nohighlight">\(x\)</span> dan <span class="math notranslate nohighlight">\(y\)</span> secara instan menggunakan operasi matriks.</p>
-<p>Berikut adalah kode program Python untuk menyelesaikan kasus ordo <span class="math notranslate nohighlight">\(2 \times 2\)</span> tersebut:</p>
+<hr class="docutils" />
+<section id="implementasi-validasi-menggunakan-python-numpy">
+<h2>Implementasi Validasi Menggunakan Python (NumPy)<a class="headerlink" href="#implementasi-validasi-menggunakan-python-numpy" title="Link to this heading">#</a></h2>
+<p>Kode program di bawah ini menerapkan fungsi bawaan dari pustaka NumPy untuk memverifikasi ketepatan nilai determinan yang telah dihitung secara manual:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
-              <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="p">])</span>
 
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">det_A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks A:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Vektor B:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil Solusi (Nilai x dan y):&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y = </span><span class="si">{</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil Validasi Komputasi Determinan:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;det(A) = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">det_A</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks A:
-[[2 1]
- [1 3]]
-
-Vektor B:
-[5 5]
-
-Hasil Solusi (Nilai x dan y):
-x = 2.0
-y = 1.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Validasi Komputasi Determinan:
+det(A) = 69
 </pre></div>
 </div>
 </div>
@@ -537,20 +559,20 @@ y = 1.0
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Profil%20Saya.html"
+       href="Materi%20Pertemuan%203.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Profil Mahasiswa</p>
+        <p class="prev-next-title">Materi 3 Eliminasi Gaussian</p>
       </div>
     </a>
     <a class="right-next"
-       href="Materi%20Pertemuan%202.html"
+       href="Tugas%20Invers.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Materi 2 Sistem Persamaan Linear</p>
+        <p class="prev-next-title">Penyelesaian Matriks 4x4</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -570,15 +592,18 @@ y = 1.0
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-komputasi-aljabar-linear-penting">Mengapa Komputasi Aljabar Linear Penting?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topik-utama-yang-dipelajari">Topik Utama yang Dipelajari</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-aljabar-linear-ordo-2x2">Contoh Soal Aljabar Linear (Ordo 2x2)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal">Soal:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-bentuk-matriks">1. Representasi Bentuk Matriks</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-visualisasi-di-geogebra">2. Cara Visualisasi di GeoGebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komputasi-determinan-dengan-ekspansi-baris-dan-kolom">Komputasi Determinan dengan Ekspansi Baris dan Kolom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-teori">Penjelasan Teori</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pendekatan-ekspansi-baris">1. Pendekatan Ekspansi Baris</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pendekatan-ekspansi-kolom">2. Pendekatan Ekspansi Kolom</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-menggunakan-kode-python-numpy">4. Implementasi Menggunakan Kode Python (NumPy)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-dan-penyelesaian-manual">Contoh Soal dan Penyelesaian Manual</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternatif-a-menghitung-menggunakan-ekspansi-baris-pertama">Alternatif A: Menghitung Menggunakan Ekspansi Baris Pertama</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternatif-b-menghitung-menggunakan-ekspansi-kolom-pertama">Alternatif B: Menghitung Menggunakan Ekspansi Kolom Pertama</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-validasi-menggunakan-python-numpy">Implementasi Validasi Menggunakan Python (NumPy)</a></li>
 </ul>
   </nav></div>
 

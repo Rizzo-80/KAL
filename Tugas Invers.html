@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Selamat Datang Di Jupyter Book saya &#8212; My sample book</title>
+    <title>Penyelesaian Matriks 4x4 &#8212; My sample book</title>
   
   
   
@@ -59,10 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas Invers';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Profil Mahasiswa" href="Profil%20Saya.html" />
+    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="prev" title="Materi 4 Determinan" href="Materi%20Pertemuan%204.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +126,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +144,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,19 +175,19 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Selamat Datang Di Jupyter Book saya
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Profil%20Saya.html">Profil Mahasiswa</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%201.html">Materi 1 Pengertian KAL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%202.html">Materi 2 Sistem Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%203.html">Materi 3 Eliminasi Gaussian</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%204.html">Materi 4 Determinan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas%20Invers.html">Penyelesaian Matriks 4x4</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian Matriks 4x4</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 </ul>
 
@@ -261,7 +260,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTugas Invers.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +290,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Tugas Invers.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -362,7 +361,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -373,11 +374,35 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Selamat Datang Di Jupyter Book saya</h1>
+    <h1>Penyelesaian Matriks 4x4</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a">Matriks A</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-determinan">1. Menghitung Determinan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah">Langkah-langkah:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-determinan">Hasil Determinan:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-invers-matriks">2. Menghitung Invers Matriks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-augmented-matrix-a-i">Metode Augmented Matrix [A|I]</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir">Hasil Akhir</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan">✅ Determinan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#invers-matriks">✅ Invers Matriks:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#atau-dalam-bentuk-faktorisasi">Atau dalam bentuk faktorisasi:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verifikasi">Verifikasi</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -387,14 +412,165 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="selamat-datang-di-jupyter-book-saya">
-<h1>Selamat Datang Di Jupyter Book saya<a class="headerlink" href="#selamat-datang-di-jupyter-book-saya" title="Link to this heading">#</a></h1>
-<p>Puji syukur kehadirat Allah SWT, sehingga dokumentasi materi kuliah ini dapat disusun dengan baik.</p>
-<p>Pada kesempatan kali ini, saya akan mempelajari <strong>Komputasi Aljabar Linear</strong> pada Semester 2 di <strong>Universitas Trunojoyo Madura</strong>. Mata kuliah ini diampu oleh Dosen <strong>Bapak Mula’ab, <a class="reference external" href="http://S.Si">S.Si</a>., M.Kom.</strong>.</p>
-<p>Melalui halaman Jupyter Book ini, seluruh tugas kuliah, studi kasus matriks, transformasi linear, hingga tahapan eksperimen algoritma akan didokumentasikan secara terstruktur sebagai portofolio pembelajaran selama satu semester penuh.</p>
-<p>Selamat membaca dan mengeksplorasi!</p>
-<div class="toctree-wrapper compound">
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="penyelesaian-matriks-4x4">
+<h1>Penyelesaian Matriks 4x4<a class="headerlink" href="#penyelesaian-matriks-4x4" title="Link to this heading">#</a></h1>
+<section id="matriks-a">
+<h2>Matriks A<a class="headerlink" href="#matriks-a" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+2 &amp; -1 &amp; 1 &amp; -1 \\
+1 &amp; 2 &amp; -1 &amp; 1 \\
+3 &amp; -1 &amp; 2 &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="menghitung-determinan">
+<h2>1. Menghitung Determinan<a class="headerlink" href="#menghitung-determinan" title="Link to this heading">#</a></h2>
+<section id="langkah-langkah">
+<h3>Langkah-langkah:<a class="headerlink" href="#langkah-langkah" title="Link to this heading">#</a></h3>
+<p><strong>Matriks awal:</strong>
+$<span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+2 &amp; -1 &amp; 1 &amp; -1 \\
+1 &amp; 2 &amp; -1 &amp; 1 \\
+3 &amp; -1 &amp; 2 &amp; 1
+\end{bmatrix}
+\)</span>$</p>
+<p><strong>OBE 1:</strong> Eliminasi kolom 1</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_2 \leftarrow R_2 - 2R_1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(R_3 \leftarrow R_3 - R_1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(R_4 \leftarrow R_4 - 3R_1\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; -3 &amp; -1 &amp; -3 \\
+0 &amp; 1 &amp; -2 &amp; 0 \\
+0 &amp; -4 &amp; -1 &amp; -2
+\end{bmatrix}
+\end{split}\]</div>
+<p><strong>OBE 2:</strong> Tukar <span class="math notranslate nohighlight">\(R_2 \leftrightarrow R_3\)</span> (det × -1)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; -2 &amp; 0 \\
+0 &amp; -3 &amp; -1 &amp; -3 \\
+0 &amp; -4 &amp; -1 &amp; -2
+\end{bmatrix}
+\end{split}\]</div>
+<p><strong>OBE 3:</strong> Eliminasi kolom 2</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_3 \leftarrow R_3 + 3R_2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(R_4 \leftarrow R_4 + 4R_2\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; -2 &amp; 0 \\
+0 &amp; 0 &amp; -7 &amp; -3 \\
+0 &amp; 0 &amp; -9 &amp; -2
+\end{bmatrix}
+\end{split}\]</div>
+<p><strong>OBE 4:</strong> Eliminasi kolom 3</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_4 \leftarrow R_4 - \frac{9}{7}R_3\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; -2 &amp; 0 \\
+0 &amp; 0 &amp; -7 &amp; -3 \\
+0 &amp; 0 &amp; 0 &amp; \frac{13}{7}
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="hasil-determinan">
+<h3>Hasil Determinan:<a class="headerlink" href="#hasil-determinan" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\det(A) = (-1)^1 \times (1 \times 1 \times -7 \times \frac{13}{7}) = (-1) \times (-13) = \boxed{13}\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="menghitung-invers-matriks">
+<h2>2. Menghitung Invers Matriks<a class="headerlink" href="#menghitung-invers-matriks" title="Link to this heading">#</a></h2>
+<section id="metode-augmented-matrix-a-i">
+<h3>Metode Augmented Matrix [A|I]<a class="headerlink" href="#metode-augmented-matrix-a-i" title="Link to this heading">#</a></h3>
+<p><strong>Matriks awal:</strong>
+$<span class="math notranslate nohighlight">\(
+\left[\begin{array}{cccc|cccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+2 &amp; -1 &amp; 1 &amp; -1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 2 &amp; -1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+3 &amp; -1 &amp; 2 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+\end{array}\right]
+\)</span>$</p>
+<p><strong>Setelah serangkaian OBE</strong> (sama seperti perhitungan determinan + eliminasi balik):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[\begin{array}{cccc|cccc}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; \frac{5}{11} &amp; -\frac{4}{11} &amp; -\frac{2}{11} \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; -3 &amp; -\frac{4}{11} &amp; \frac{23}{11} &amp; \frac{6}{11} \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; -1 &amp; -\frac{2}{11} &amp; \frac{6}{11} &amp; \frac{3}{11} \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 4 &amp; \frac{1}{11} &amp; -\frac{25}{11} &amp; -\frac{7}{11}
+\end{array}\right]
+\end{split}\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="hasil-akhir">
+<h2>Hasil Akhir<a class="headerlink" href="#hasil-akhir" title="Link to this heading">#</a></h2>
+<section id="determinan">
+<h3>✅ Determinan:<a class="headerlink" href="#determinan" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\boxed{\det(A) = 13}\]</div>
+</section>
+<section id="invers-matriks">
+<h3>✅ Invers Matriks:<a class="headerlink" href="#invers-matriks" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boxed{
+A^{-1} = \begin{bmatrix}
+1 &amp; \frac{5}{11} &amp; -\frac{4}{11} &amp; -\frac{2}{11} \\[6pt]
+-3 &amp; -\frac{4}{11} &amp; \frac{23}{11} &amp; \frac{6}{11} \\[6pt]
+-1 &amp; -\frac{2}{11} &amp; \frac{6}{11} &amp; \frac{3}{11} \\[6pt]
+4 &amp; \frac{1}{11} &amp; -\frac{25}{11} &amp; -\frac{7}{11}
+\end{bmatrix}
+}
+\end{split}\]</div>
+</section>
+<section id="atau-dalam-bentuk-faktorisasi">
+<h3>Atau dalam bentuk faktorisasi:<a class="headerlink" href="#atau-dalam-bentuk-faktorisasi" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} = \frac{1}{11} \begin{bmatrix}
+11 &amp; 5 &amp; -4 &amp; -2 \\
+-33 &amp; -4 &amp; 23 &amp; 6 \\
+-11 &amp; -2 &amp; 6 &amp; 3 \\
+44 &amp; 1 &amp; -25 &amp; -7
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="verifikasi">
+<h2>Verifikasi<a class="headerlink" href="#verifikasi" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[A \times A^{-1} = I\]</div>
+<p>Contoh elemen (1,1):
+$<span class="math notranslate nohighlight">\(1(1) + 1(-3) + 1(-1) + 1(4) = 1 - 3 - 1 + 4 = 1 \checkmark\)</span>$</p>
+<p>Contoh elemen (1,2):
+$<span class="math notranslate nohighlight">\(1(\frac{5}{11}) + 1(-\frac{4}{11}) + 1(-\frac{2}{11}) + 1(\frac{1}{11}) = \frac{5-4-2+1}{11} = 0 \checkmark\)</span>$</p>
+<p><strong>✓ Hasil benar!</strong></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -427,12 +603,21 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Materi%20Pertemuan%204.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Materi 4 Determinan</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="Profil%20Saya.html"
+       href="markdown.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Profil Mahasiswa</p>
+        <p class="prev-next-title">Markdown Files</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -442,6 +627,37 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a">Matriks A</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-determinan">1. Menghitung Determinan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah">Langkah-langkah:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-determinan">Hasil Determinan:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-invers-matriks">2. Menghitung Invers Matriks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-augmented-matrix-a-i">Metode Augmented Matrix [A|I]</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir">Hasil Akhir</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan">✅ Determinan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#invers-matriks">✅ Invers Matriks:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#atau-dalam-bentuk-faktorisasi">Atau dalam bentuk faktorisasi:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verifikasi">Verifikasi</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
