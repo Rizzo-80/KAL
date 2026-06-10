@@ -1,0 +1,811 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Eliminasi Gaussian &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Materi Pertemuan 3';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Profil%20Saya.html">Profil Mahasiswa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%201.html">Materi Pertemuan 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Materi%20Pertemuan%202.html">Materi Pertemuan 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMateri Pertemuan 3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Materi Pertemuan 3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Eliminasi Gaussian</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Eliminasi Gaussian</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-matriks">Definition. Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-matriks-augmentasi">Definition. Matriks Augmentasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-bentuk-eselon-baris">Matriks Bentuk Eselon Baris</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-bentuk-eselon-baris">Definition. Bentuk Eselon Baris</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Eliminasi Gaussian</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-operasi-baris-elementer-pada-matriks">Definition. Operasi Baris Elementer pada Matriks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-algoritma-eliminasi-gaussian">Definition. Algoritma Eliminasi Gaussian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-algoritma-eliminasi-gauss-jordan">Definition. Algoritma Eliminasi Gauss-Jordan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-fungsi-baris-di-sagemath">Implementasi Fungsi Baris di SageMath</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-rescale-row-i-a">1. <code class="docutils literal notranslate"><span class="pre">A.rescale_row(i,</span> <span class="pre">a)</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#studi-kasus-eliminasi-gaussian-spl-4x4">Studi Kasus: Eliminasi Gaussian SPL 4x4</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-sistem-persamaan-linear-dan-matriks-augmented">Representasi Sistem Persamaan Linear dan Matriks Augmented</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-transformasi-operasi-baris-elementer-obe">Proses Transformasi Operasi Baris Elementer (OBE)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-1-analisis-pivot-kolom-pertama-dan-eliminasi-baris-di-bawahnya">Tahap 1: Analisis Pivot Kolom Pertama dan Eliminasi Baris di Bawahnya</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-2-analisis-kolom-kedua-dan-ketiga">Tahap 2: Analisis Kolom Kedua dan Ketiga</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-3-eliminasi-ke-atas-menuju-eselon-baris-tereduksi">Tahap 3: Eliminasi ke Atas (Menuju Eselon Baris Tereduksi)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-himpunan-penyelesaian">Kesimpulan Himpunan Penyelesaian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validasi-logika-menggunakan-kode-python-numpy">Validasi Logika Menggunakan Kode Python (NumPy)</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="eliminasi-gaussian">
+<h1>Eliminasi Gaussian<a class="headerlink" href="#eliminasi-gaussian" title="Link to this heading">#</a></h1>
+<p>Pada bagian sebelumnya, kita telah menjelaskan bagaimana cara menyelesaikan sistem linear <span class="math notranslate nohighlight">\(L\)</span>. Prosedur tersebut melibatkan penerapan serangkaian operasi baris pada <span class="math notranslate nohighlight">\(L\)</span> untuk memperoleh sistem <span class="math notranslate nohighlight">\(L'\)</span> yang “lebih sederhana”.</p>
+<p>Pada bagian ini kita akan memberikan penjelasan lebih detail yaitu bagaimana:</p>
+<ol class="arabic simple">
+<li><p>Mendeskripsikan secara tepat apa yang kita maksud dengan sistem “lebih sederhana”.</p></li>
+<li><p>Memberikan algoritma untuk menentukan secara tepat urutan operasi baris apa yang harus diterapkan untuk memperoleh sistem yang lebih sederhana ini.</p></li>
+<li><p>Menjelaskan cara menemukan semua solusi dari sistem yang lebih sederhana yang dihasilkan.</p></li>
+</ol>
+<p>Sebelum kita memulai langkah-langkah ini, kita menjelaskan notasi tertentu. Seperti Anda lihat, ketika melakukan operasi baris pada sistem persamaan, pada dasarnya kita memperlakukan variabel yang tidak diketahui, serta simbol plus (<span class="math notranslate nohighlight">\(+\)</span>) dan sama dengan (<span class="math notranslate nohighlight">\(=\)</span>) secara konsisten. Salah satu hal yang berubah dalam suatu langkah adalah koefisien dalam persamaan.</p>
+<hr class="docutils" />
+<section id="definition-matriks">
+<h2>Definition. Matriks<a class="headerlink" href="#definition-matriks" title="Link to this heading">#</a></h2>
+<p>Sebuah <strong>matriks</strong> adalah susunan bilangan berbentuk persegi panjang. Matriks dengan <span class="math notranslate nohighlight">\(m\)</span> baris dan <span class="math notranslate nohighlight">\(n\)</span> kolom dikatakan memiliki ukuran (atau dimensi) <span class="math notranslate nohighlight">\(m \times n\)</span>.</p>
+</section>
+<section id="definition-matriks-augmentasi">
+<h2>Definition. Matriks Augmentasi<a class="headerlink" href="#definition-matriks-augmentasi" title="Link to this heading">#</a></h2>
+<p>Misalkan <span class="math notranslate nohighlight">\(L\)</span> adalah sistem linear. Matriks augmentasi yang terkait dengan <span class="math notranslate nohighlight">\(L\)</span> adalah matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+a_{11} &amp; a_{12} &amp; \dots &amp; a_{1n} &amp; \big| &amp; b_1 \\
+a_{21} &amp; a_{22} &amp; \dots &amp; a_{2n} &amp; \big| &amp; b_2 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \big| &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \dots &amp; a_{mn} &amp; \big| &amp; b_m
+\end{bmatrix}\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="matriks-bentuk-eselon-baris">
+<h2>Matriks Bentuk Eselon Baris<a class="headerlink" href="#matriks-bentuk-eselon-baris" title="Link to this heading">#</a></h2>
+<p>Berikut adalah formulasi untuk sistem linear “sederhana”; yaitu sistem yang matriks augmentasinya berada dalam bentuk eselon baris, seperti yang dijelaskan di bawah.</p>
+<section id="definition-bentuk-eselon-baris">
+<h3>Definition. Bentuk Eselon Baris<a class="headerlink" href="#definition-bentuk-eselon-baris" title="Link to this heading">#</a></h3>
+<p><strong>Baris nol</strong> dari suatu matriks adalah baris yang semua entrinya sama dengan nol; <strong>baris tak-nol</strong> adalah baris yang memuat setidaknya satu entri tak-nol.</p>
+<p>Suatu matriks berada dalam <strong>bentuk eselon baris</strong> jika kondisi-kondisi berikut terpenuhi:</p>
+<ol class="arabic simple">
+<li><p>Pada sembarang baris tak-nol, entri tak-nol pertama (yaitu, paling kiri) sama dengan satu. Satu utama (pivot) dari suatu matriks adalah entri dari suatu baris yang sama dengan satu, dan merupakan entri tak-nol pertama dari baris tersebut.</p></li>
+<li><p>Semua baris nol dikelompokkan bersama di bagian bawah matriks.</p></li>
+<li><p>Diberikan dua baris tak-nol sembarang dalam matriks, satu utama (pivot) dari baris yang lebih bawah terletak di sebelah kanan satu utama dari baris di atasnya.</p></li>
+</ol>
+<p>Suatu matriks berada dalam <strong>bentuk eselon baris tereduksi</strong> jika selain memenuhi kondisi (1)-(3) juga memenuhi kondisi berikut:
+4. Setiap kolom matriks yang memuat satu utama pada salah satu barisnya, maka itu adalah satu-satunya entri tak-nol dari kolom tersebut.</p>
+<blockquote>
+<div><p><strong>Aturan Praktis Pemeriksaan:</strong></p>
+<ul class="simple">
+<li><p>Pertama verifikasi apakah semua baris nol berada di bagian bawah.</p></li>
+<li><p>Untuk setiap baris tak-nol, tentukan apakah entri tak-nol pertama adalah 1, dan tandai kotak pada pivot tersebut.</p></li>
+<li><p>Pastikan kotak-kotak tersebut membentuk pola tangga.</p></li>
+<li><p><em>(Untuk eselon baris tereduksi)</em> Tentukan apakah setiap kolom selain pivot memiliki nilai 0.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h2>Eliminasi Gaussian<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Prosedur sistematis yang disebut <strong>eliminasi Gaussian</strong> memungkinkan kita mereduksi sistem linear <span class="math notranslate nohighlight">\(L\)</span> menjadi sistem <span class="math notranslate nohighlight">\(L'\)</span> dalam bentuk eselon baris dengan melakukan <strong>Operasi Baris Elementer (OBE)</strong>.</p>
+<section id="definition-operasi-baris-elementer-pada-matriks">
+<h3>Definition. Operasi Baris Elementer pada Matriks<a class="headerlink" href="#definition-operasi-baris-elementer-pada-matriks" title="Link to this heading">#</a></h3>
+<p>Misalkan <span class="math notranslate nohighlight">\(A\)</span> adalah matriks yang diberikan, dan nyatakan dengan <span class="math notranslate nohighlight">\(R_i\)</span> baris ke-<span class="math notranslate nohighlight">\(i\)</span> dari <span class="math notranslate nohighlight">\(A\)</span>. Terdapat tiga jenis operasi matriks dasar:</p>
+<ol class="arabic simple">
+<li><p><strong>Perkalian Skalar:</strong> Kalikan sebuah baris dengan bilangan tak-nol <span class="math notranslate nohighlight">\(k\)</span> (<span class="math notranslate nohighlight">\(R_i \leftarrow k R_i\)</span>).</p></li>
+<li><p><strong>Pertukaran Baris:</strong> Tukar posisi dua baris dari <span class="math notranslate nohighlight">\(A\)</span> (<span class="math notranslate nohighlight">\(R_i \leftrightarrow R_j\)</span>).</p></li>
+<li><p><strong>Penjumlahan Baris:</strong> Tambahkan kelipatan satu baris ke baris lain (<span class="math notranslate nohighlight">\(R_i \leftarrow R_i + k R_j\)</span>).</p></li>
+</ol>
+<p>Proses mengubah matriks menggunakan operasi baris elementer disebut <strong>reduksi baris</strong>. Dua matriks dikatakan <strong>ekuivalen baris</strong> jika salah satunya diperoleh dari yang lain melalui serangkaian OBE.</p>
+</section>
+<section id="definition-algoritma-eliminasi-gaussian">
+<h3>Definition. Algoritma Eliminasi Gaussian<a class="headerlink" href="#definition-algoritma-eliminasi-gaussian" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Langkah 1:</strong> Temukan kolom tak-nol paling kiri dan lakukan pertukaran baris untuk memindahkan baris dengan entri tak-nol ini ke bagian atas matriks.</p></li>
+<li><p><strong>Langkah 2:</strong> Skala baris teratas yang baru untuk menghasilkan satu utama pada baris tersebut. Sebut baris baru ini <span class="math notranslate nohighlight">\(R_1\)</span>.</p></li>
+<li><p><strong>Langkah 3:</strong> Untuk setiap baris <span class="math notranslate nohighlight">\(R_k\)</span> di bawah <span class="math notranslate nohighlight">\(R_1\)</span>, lakukan operasi baris berbentuk <span class="math notranslate nohighlight">\(R_k \leftarrow R_k - c R_1\)</span> untuk mengubah semua entri di bawah satu utama menjadi nol.</p></li>
+<li><p><strong>Langkah 4:</strong> Mulai lagi dengan Langkah 1 yang diterapkan pada matriks yang terdiri dari semua baris di bawah <span class="math notranslate nohighlight">\(R_1\)</span>. Lanjutkan hingga matriks berada dalam bentuk eselon baris.</p></li>
+</ul>
+</section>
+<section id="definition-algoritma-eliminasi-gauss-jordan">
+<h3>Definition. Algoritma Eliminasi Gauss-Jordan<a class="headerlink" href="#definition-algoritma-eliminasi-gauss-jordan" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Langkah 1-4:</strong> Terapkan eliminasi Gaussian untuk mengubah matriks menjadi bentuk eselon baris.</p></li>
+<li><p><strong>Langkah 5:</strong> Temukan kolom paling kanan dari matriks yang memuat satu utama. Misalkan <span class="math notranslate nohighlight">\(R_i\)</span> adalah baris yang memuat satu utama ini. Untuk setiap baris <span class="math notranslate nohighlight">\(R_k\)</span> di atas <span class="math notranslate nohighlight">\(R_i\)</span>, lakukan operasi baris berbentuk <span class="math notranslate nohighlight">\(R_k \leftarrow R_k - c R_i\)</span> untuk mengganti semua entri di atas satu utama dengan nol.</p></li>
+<li><p><strong>Langkah 6:</strong> Mulai lagi dengan Langkah 5 untuk diterapkan pada kolom berikutnya di sebelah kiri yang memuat satu utama hingga matriks berada dalam bentuk eselon baris tereduksi.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="implementasi-fungsi-baris-di-sagemath">
+<h2>Implementasi Fungsi Baris di SageMath<a class="headerlink" href="#implementasi-fungsi-baris-di-sagemath" title="Link to this heading">#</a></h2>
+<p>Di dalam lingkungan komputasi SageMath, indeks baris dimulai dari angka <strong>0</strong> (bukan 1). Operasi dasar ini akan mengubah matriks secara langsung (<em>in-place</em>).</p>
+<section id="a-rescale-row-i-a">
+<h3>1. <code class="docutils literal notranslate"><span class="pre">A.rescale_row(i,</span> <span class="pre">a)</span></code><a class="headerlink" href="#a-rescale-row-i-a" title="Link to this heading">#</a></h3>
+<p>Mengalikan baris ke-<span class="math notranslate nohighlight">\(i\)</span> dengan skalar <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="n">A</span><span class="o">.</span><span class="n">rescale_row</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Kalikan baris indeks ke-1 dengan 2</span>
+<span class="c1"># Hasil: A = [[1, 2, 3], [8, 10, 12]]</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="studi-kasus-eliminasi-gaussian-spl-4x4">
+<h1>Studi Kasus: Eliminasi Gaussian SPL 4x4<a class="headerlink" href="#studi-kasus-eliminasi-gaussian-spl-4x4" title="Link to this heading">#</a></h1>
+<p>Halaman ini membahas penyelesaian Sistem Persamaan Linear (SPL) dengan ordo <span class="math notranslate nohighlight">\(4 \times 4\)</span> menggunakan metode Eliminasi Gaussian hingga menghasilkan bentuk eselon baris tereduksi.</p>
+<hr class="docutils" />
+<section id="representasi-sistem-persamaan-linear-dan-matriks-augmented">
+<h2>Representasi Sistem Persamaan Linear dan Matriks Augmented<a class="headerlink" href="#representasi-sistem-persamaan-linear-dan-matriks-augmented" title="Link to this heading">#</a></h2>
+<p>Misalkan kita memiliki sistem persamaan linear <span class="math notranslate nohighlight">\(4 \times 4\)</span> sebagai berikut:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(x_1 + x_2 + x_3 + x_4 = 10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2x_1 + 3x_2 + 2x_3 + 3x_4 = 23\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x_1 + 2x_2 + 3x_3 + 2x_4 = 19\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x_1 + x_2 + x_3 + 2x_4 = 12\)</span></p></li>
+</ol>
+<p>Jika direpresentasikan ke dalam bentuk <strong>Matriks Augmented (Matriks Diperbesar)</strong>, maka susunannya adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; \big| &amp; 10 \\
+2 &amp; 3 &amp; 2 &amp; 3 &amp; \big| &amp; 23 \\
+1 &amp; 2 &amp; 3 &amp; 2 &amp; \big| &amp; 19 \\
+1 &amp; 1 &amp; 1 &amp; 2 &amp; \big| &amp; 12
+\end{bmatrix}\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="proses-transformasi-operasi-baris-elementer-obe">
+<h2>Proses Transformasi Operasi Baris Elementer (OBE)<a class="headerlink" href="#proses-transformasi-operasi-baris-elementer-obe" title="Link to this heading">#</a></h2>
+<p>Tujuan kita adalah mengubah matriks di atas menjadi matriks eselon baris tereduksi menggunakan Operasi Baris Elementer (OBE).</p>
+<section id="tahap-1-analisis-pivot-kolom-pertama-dan-eliminasi-baris-di-bawahnya">
+<h3>Tahap 1: Analisis Pivot Kolom Pertama dan Eliminasi Baris di Bawahnya<a class="headerlink" href="#tahap-1-analisis-pivot-kolom-pertama-dan-eliminasi-baris-di-bawahnya" title="Link to this heading">#</a></h3>
+<p>Pada baris pertama kolom pertama (<span class="math notranslate nohighlight">\(a_{11}\)</span>), kita sudah mendapatkan nilai pivot utama bernilai <strong>1</strong>. Langkah selanjutnya adalah menolkan semua elemen di bawah pivot tersebut (Baris 2 sampai Baris 4).</p>
+<ul class="simple">
+<li><p><strong>Operasi OBE:</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(R_2 \leftarrow R_2 - 2R_1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(R_3 \leftarrow R_3 - R_1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(R_4 \leftarrow R_4 - R_1\)</span></p></li>
+</ul>
+</li>
+</ul>
+<p>Hasil transformasi matriks:
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; \big| &amp; 10 \\
+0 &amp; 1 &amp; 0 &amp; 1 &amp; \big| &amp; 3 \\
+0 &amp; 1 &amp; 2 &amp; 1 &amp; \big| &amp; 9 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; \big| &amp; 2
+\end{bmatrix}\)</span>$</p>
+</section>
+<section id="tahap-2-analisis-kolom-kedua-dan-ketiga">
+<h3>Tahap 2: Analisis Kolom Kedua dan Ketiga<a class="headerlink" href="#tahap-2-analisis-kolom-kedua-dan-ketiga" title="Link to this heading">#</a></h3>
+<p>Perhatikan Baris 2 kolom kedua (<span class="math notranslate nohighlight">\(a_{22}\)</span>), nilainya sudah otomatis bernilai <strong>1</strong> (pivot kedua). Sekarang kita gunakan baris kedua ini untuk menolkan elemen di Baris 3 kolom kedua (<span class="math notranslate nohighlight">\(a_{32}\)</span>).</p>
+<ul class="simple">
+<li><p><strong>Operasi OBE:</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(R_3 \leftarrow R_3 - R_2\)</span></p></li>
+</ul>
+</li>
+</ul>
+<p>Hasil transformasi matriks:
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; \big| &amp; 10 \\
+0 &amp; 1 &amp; 0 &amp; 1 &amp; \big| &amp; 3 \\
+0 &amp; 0 &amp; 2 &amp; 0 &amp; \big| &amp; 6 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; \big| &amp; 2
+\end{bmatrix}\)</span>$</p>
+<p>Selanjutnya, buat elemen pada Baris 3 kolom ketiga (<span class="math notranslate nohighlight">\(a_{33}\)</span>) menjadi 1 utama (pivot ketiga) dengan membagi Baris 3 dengan angka 2.</p>
+<ul class="simple">
+<li><p><strong>Operasi OBE:</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(R_3 \leftarrow \frac{1}{2}R_3\)</span></p></li>
+</ul>
+</li>
+</ul>
+<p>Hasil transformasi matriks:
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; \big| &amp; 10 \\
+0 &amp; 1 &amp; 0 &amp; 1 &amp; \big| &amp; 3 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; \big| &amp; 3 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; \big| &amp; 2
+\end{bmatrix}\)</span>$</p>
+<p><em>(Matriks di atas sekarang sudah sukses membentuk format Eselon Baris karena seluruh baris terbawah memiliki angka 1 utama di sebelah kanan baris di atasnya).</em></p>
+</section>
+<section id="tahap-3-eliminasi-ke-atas-menuju-eselon-baris-tereduksi">
+<h3>Tahap 3: Eliminasi ke Atas (Menuju Eselon Baris Tereduksi)<a class="headerlink" href="#tahap-3-eliminasi-ke-atas-menuju-eselon-baris-tereduksi" title="Link to this heading">#</a></h3>
+<p>Untuk membuat matriks identitas penuh di sisi kiri, kita kurangi elemen Baris 1 dan Baris 2 dengan elemen baris di bawahnya agar kolom di atas pivot bernilai 0.</p>
+<ul class="simple">
+<li><p><strong>Operasi OBE:</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(R_2 \leftarrow R_2 - R_4\)</span> (Menolkan <span class="math notranslate nohighlight">\(a_{24}\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_1 \leftarrow R_1 - R_4\)</span> (Menolkan <span class="math notranslate nohighlight">\(a_{14}\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_1 \leftarrow R_1 - R_3\)</span> (Menolkan <span class="math notranslate nohighlight">\(a_{13}\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_1 \leftarrow R_1 - R_2\)</span> (Menolkan <span class="math notranslate nohighlight">\(a_{12}\)</span>)</p></li>
+</ul>
+</li>
+</ul>
+<p>Hasil akhir transformasi matriks:
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; \big| &amp; 4 \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; \big| &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; \big| &amp; 3 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; \big| &amp; 2
+\end{bmatrix}\)</span>$</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="kesimpulan-himpunan-penyelesaian">
+<h2>Kesimpulan Himpunan Penyelesaian<a class="headerlink" href="#kesimpulan-himpunan-penyelesaian" title="Link to this heading">#</a></h2>
+<p>Berdasarkan hasil matriks eselon baris tereduksi di atas, nilai dari masing-masing variabel langsung ditemukan tanpa perlu substitusi balik:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_1 = 4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x_2 = 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x_3 = 3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x_4 = 2\)</span></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="validasi-logika-menggunakan-kode-python-numpy">
+<h2>Validasi Logika Menggunakan Kode Python (NumPy)<a class="headerlink" href="#validasi-logika-menggunakan-kode-python-numpy" title="Link to this heading">#</a></h2>
+<p>Berikut adalah kode Python untuk memvalidasi kebenaran nilai variabel dari sistem persamaan linear <span class="math notranslate nohighlight">\(4 \times 4\)</span> di atas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil Validasi Variabel (x1 sampai x4):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x1 = </span><span class="si">{</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x2 = </span><span class="si">{</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x3 = </span><span class="si">{</span><span class="n">X</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x4 = </span><span class="si">{</span><span class="n">X</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Validasi Variabel (x1 sampai x4):
+x1 = 4.0
+x2 = 1.0
+x3 = 3.0
+x4 = 2.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Eliminasi Gaussian</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-matriks">Definition. Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-matriks-augmentasi">Definition. Matriks Augmentasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-bentuk-eselon-baris">Matriks Bentuk Eselon Baris</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-bentuk-eselon-baris">Definition. Bentuk Eselon Baris</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Eliminasi Gaussian</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-operasi-baris-elementer-pada-matriks">Definition. Operasi Baris Elementer pada Matriks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-algoritma-eliminasi-gaussian">Definition. Algoritma Eliminasi Gaussian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-algoritma-eliminasi-gauss-jordan">Definition. Algoritma Eliminasi Gauss-Jordan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-fungsi-baris-di-sagemath">Implementasi Fungsi Baris di SageMath</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-rescale-row-i-a">1. <code class="docutils literal notranslate"><span class="pre">A.rescale_row(i,</span> <span class="pre">a)</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#studi-kasus-eliminasi-gaussian-spl-4x4">Studi Kasus: Eliminasi Gaussian SPL 4x4</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-sistem-persamaan-linear-dan-matriks-augmented">Representasi Sistem Persamaan Linear dan Matriks Augmented</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-transformasi-operasi-baris-elementer-obe">Proses Transformasi Operasi Baris Elementer (OBE)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-1-analisis-pivot-kolom-pertama-dan-eliminasi-baris-di-bawahnya">Tahap 1: Analisis Pivot Kolom Pertama dan Eliminasi Baris di Bawahnya</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-2-analisis-kolom-kedua-dan-ketiga">Tahap 2: Analisis Kolom Kedua dan Ketiga</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-3-eliminasi-ke-atas-menuju-eselon-baris-tereduksi">Tahap 3: Eliminasi ke Atas (Menuju Eselon Baris Tereduksi)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-himpunan-penyelesaian">Kesimpulan Himpunan Penyelesaian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validasi-logika-menggunakan-kode-python-numpy">Validasi Logika Menggunakan Kode Python (NumPy)</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
